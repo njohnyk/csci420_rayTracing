@@ -1,0 +1,4 @@
+﻿  glew.c
+     Creating library ..\..\lib\Debug\x64\glew32d.lib and object ..\..\lib\Debug\x64\glew32d.exp
+  glew_shared.vcxproj -> C:\lib2015\OpenGL\glew-2.0.0\build\vc12\..\..\bin\Debug\x64\glew32d.dll
+  glew_shared.vcxproj -> ..\..\bin\Debug\x64\glew32d.pdb (Full PDB)

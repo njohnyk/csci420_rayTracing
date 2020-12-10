@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OpenGLHelper>../OpenGLHelper-starterCode</OpenGLHelper>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)\Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../external/glm;../external/imageIO;../external/jpeg-9a-win32/;../external/glew-1.13.0/include;../external/freeglut-3.0.0-win32/include;$(OpenGLHelper);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;SHADER_BASE_PATH=R"($(ProjectDir)$(OpenGLHelper)/)"</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../external/jpeg-9a-win32/Release;../external/glew-1.13.0/lib/$(Configuration)/Win32;../external/freeglut-3.0.0-win32/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jpeg.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OpenGLHelper">
+      <Value>$(OpenGLHelper)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
