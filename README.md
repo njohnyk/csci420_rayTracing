@@ -36,7 +36,7 @@ RAY_SAMPLES
 #### For more details regarding the implementation and extra credits, look into hw3/readme.txt
 
 ## Demo
-[Youtube](https://youtu.be/0RUD3C1P898)
+[Youtube](https://youtu.be/6kB2sDHOprE)
 
 ### Tested on
 #### MacOS Mojave
